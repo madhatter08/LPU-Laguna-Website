@@ -246,7 +246,7 @@ nav .fa{
     opacity: 0;
     transition: 0.5s;
     color: #fff;
-    font-size: xx-large;
+    font-size: small;
 }
 .layer:hover a{
     bottom: 40%;
