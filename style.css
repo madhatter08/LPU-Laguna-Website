@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(BG.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+body{
+  background-image: url("https://scontent.fmnl3-3.fna.fbcdn.net/v/t1.15752-9/259734345_196390699352746_7202858400171282440_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHU_nyZsB_QLo8XG95IMjqGS-wOXIor7-JL7A5ciivv4uu-QrCOBmplQR4tRKWhB0OMQCcu3GkNauWrTFhNJ3dU&_nc_ohc=RMngXX9ih1AAX_GOtZX&_nc_ht=scontent.fmnl3-3.fna&oh=71a87ebe7745077a660a19d67cafeeba&oe=61CC0EBA");
+  min-height: 1080px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #eefe08;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 48px;
+}
+.welcome{
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.welcome h1{
+    font-size: 30px;
+}
+.text-box p{
+    font-size: 20px;
+    margin: 10px 0 40px;
+    color: #fff;
+}
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid #fff;
+    padding: 12px 34px; 
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    border: 1px solid #07006e;
+    background: #07006e;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media (max-width: 700){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*----------------Management---------------*/
+.management{
+    width: 80%;
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.coach h3{
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+.coach h4{
+    color: #fff;
+}
+.coach p{
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.coach{
+    flex-basis: 31%;
+    background: #000000;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.coach:hover{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+
+.coach img{
+    border-radius: 10px;
+}
+
+@media (max-width: 700){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*---------------Games Played---------------*/
+.gamesPlayed{
+    width: 80%;
+    margin: auto;
+    color: #000000;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.gamesPlayed h1{
+    color: #000000;
+}
+.games img{
+    margin: 10px;
+    border-radius: 10px;
+}
+.games{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    box-sizing:content-box;
+    background: url(BG.jpg);
+}
+.games:hover{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover {
+    background: rgba(0, 0, 0, 0.76);
+}
+.layer h3{
+    color: #fff;
+    width:100%;
+    font-weight:600;
+    font-size: 20px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 20%;
+    opacity:1;
+}
+.layer a{
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    color: #fff;
+    font-size: xx-large;
+}
+.layer:hover a{
+    bottom: 40%;
+    opacity:1;
+}
+
+.layer:hover img{
+    bottom: 40%;
+    opacity:1;
+}
+
+/*-------------games played page--------------*/
+.sub-header{
+    height:50vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(BG3.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top:100px;
+    font-size: 62px;
+    font-family: 'Poppins', sans-serif;
+}
+.gameLinks{
+    width: 61%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.gameLinks h2{
+    font-weight: 400;
+    padding-top: 20px;
+}
+.gameLinks h3{
+    font-weight: 300;
+    font-size: 15px;
+}
+.links{
+    flex-basis: 32%;
+    margin-bottom: 50px;
+    position: relative;
+    box-sizing: border-box;
+}
+.links:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+
+/*---------------Team Members---------------*/
+.teamMembers{
+    width: 80%;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.teamML{
+    background: rgb(0,0,0);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.teamML:hover{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+.teamML h2{
+    font-size:20px;
+    margin-top: 40px;
+    padding-bottom: 15px;
+    padding-top:20px;
+}
+.teamML h3{
+    font-size:15px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.teamML p{
+    padding-bottom: 20px;
+}
+.teamML img{
+    border-radius: 10px;
+}
+.teamVALORANT{
+    background: rgb(0,0,0);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.teamVALORANT:hover{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+.teamVALORANT h2{
+    font-size:20px;
+    margin-top: 40px;
+    padding-bottom: 15px;
+    padding-top:20px;
+}
+.teamVALORANT h3{
+    font-size:15px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.teamVALORANT p{
+    padding-bottom: 20px;
+}
+.teamVALORANT img{
+    border-radius: 10px;
+}
+.teamCODM{
+    background: rgb(0,0,0);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.teamCODM:hover{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+.teamCODM h2{
+    font-size:20px;
+    margin-top: 40px;
+    padding-bottom: 15px;
+    padding-top:20px;
+}
+.teamCODM h3{
+    font-size:15px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.teamCODM p{
+    padding-bottom: 20px;
+}
+.teamCODM img{
+    border-radius: 10px;
+}
+.bg{
+    background: rgb(0,0,0);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.bg{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+.bg h2{
+    font-size:20px;
+    margin-top: 40px;
+    padding-bottom: 15px;
+    padding-top:20px;
+}
+.bg h3{
+    font-size:15px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.bg p{
+    padding-bottom: 20px;
+}
+.bg img{
+    border-radius: 10px;
+}
+/*---------------Achievements---------------*/
+.introduction {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.introduction h3{
+    margin: 20px;
+}
+.introduction h2{
+    margin: 20px;
+}
+.introduction p{
+    margin: 20px;
+}
+.president{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.president img{
+    border-radius: 14px;
+}
+.president p{
+    font-size: small;
+}
+.trustees{
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.trustees img{
+    border-radius: 14px;
+}
+.achievements{
+    width: 80%;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.achievements h1{
+    color: black
+}
+.Achievements{
+    background: url(BG.jpg);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+.Achievements h1{
+    color: white;
+}
+/*---------------Contact Us---------------*/
+.facebook{
+    width: 80%;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    margin: auto;
+}
+.contactUs{
+    width:80%;
+    margin:50px auto;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(BG2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.contactUs h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/*----------------Department---------------*/
+.department{
+    width: 80%;
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.coach h3{
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+.coach p{
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.coach{
+    flex-basis: 31%;
+    background: url(BG.jpg);
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.coach:hover{
+    box-shadow: 0 0 20px 0 rgb(255,0,0);
+}
+
+.coach img{
+    border-radius: 10px;
+}
+
+@media (max-width: 700){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*---------------Admission---------------*/
+.admission{
+    width: 80%;
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.admission img{
+    border-radius: 15px;
+}
+
+.requirements{
+    width: 80%;
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*---------------About Us---------------*/
+.aboutUs{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.aboutUs h4{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.aboutUs p{
+    font-size:13px;
+}
